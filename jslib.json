@@ -1,0 +1,11 @@
+{
+    "name": "just-utils",
+    "npmname": "just-utils",
+    "umdname": "JustUtils",
+    "username": "just-utils",
+    "type": "js",
+    "module": "umd,esm,commonjs",
+    "test": "mocha",
+    "lang": "en",
+    "version": "1.5.1"
+}
