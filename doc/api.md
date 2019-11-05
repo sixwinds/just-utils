@@ -77,7 +77,7 @@ ApiSender.send('http://demo/api/getpostputdelete', {
   data: {
     paramName: 'paramValue'
   },
-  isBizSuccess: function(resultJson))) {
+  isBizSuccess: function(resultJson) {
     return resultJson.success === true ? true : false;
   }
 }).then(function(resultJson) {
