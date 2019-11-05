@@ -1,30 +1,24 @@
 # [just-utils](https://github.com/just-utils/just-utils)
 [![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/yanhaijing/jslib-base)
-[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/just-utils/just-utils/blob/master/LICENSE)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/sixwinds/just-utils/blob/master/LICENSE)
 [![Build Status](https://travis-ci.org/just-utils/just-utils.svg?branch=master)](https://travis-ci.org/just-utils/just-utils)
 [![Coveralls](https://img.shields.io/coveralls/just-utils/just-utils.svg)](https://coveralls.io/github/just-utils/just-utils)
 [![npm](https://img.shields.io/badge/npm-0.1.0-orange.svg)](https://www.npmjs.com/package/just-utils)
 [![NPM downloads](http://img.shields.io/npm/dm/just-utils.svg?style=flat-square)](http://www.npmtrends.com/just-utils)
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/just-utils/just-utils.svg)](http://isitmaintained.com/project/just-utils/just-utils "Percentage of issues still open")
 
-The best third party `JS|TS` library scaffold. 
+https://github.com/sixwinds/just-utils/blob/master/LICENSE
 
 ## Characteristics
 
-- Coded in ES6+ or TypeScript, easily compile and generate production code
-- Supports multi environment, including default browsers, Node, AMD, CMD, Webpack, Rollup, Fis and so on.
-- Integrated [jsmini](https://github.com/jsmini)
-
-**Note:** When `export` and `export default` are not used at the same time, there is the option to 
-turn on `legacy mode`. Under `legacy mode`, the module system can be compatible with `IE6-8`. For more information on legacy mode, 
-please see rollup supplemental file. 
+- ApiSender - Simple encapsulation of web api fetch 
 
 ## Compatibility
 Unit tests guarantee support on the following environment:
 
 | IE   | CH   | FF   | SF   | OP   | IOS  | Android   | Node  |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ----- |
-| 6+   | 29+ | 55+  | 9+   | 50+  | 9+   | 4+   | 4+ |
+| untested | untested | untested | untested | untested | untested | untested | untested |
 
 > Note: Compiling code depend on ES5, so you need import [es5-shim](http://github.com/es-shims/es5-shim/) to compatible with `IE6-8`, here is a [demo](./demo/demo-global.html)
 
@@ -50,19 +44,19 @@ $ npm install --save just-utils
 For node environment：
 
 ```js
-var base = require('just-utils');
+var JustUtils = require('just-utils');
 ```
 
 For webpack or similar environment：
 
 ```js
-import base from 'just-utils';
+import JustUtils from 'just-utils';
 ```
 
 For requirejs environment:
 
 ```js
-requirejs(['node_modules/just-utils/dist/index.aio.js'], function (base) {
+requirejs(['node_modules/just-utils/dist/index.aio.js'], function (JustUtils) {
     // do something...
 })
 ```
@@ -111,7 +105,7 @@ $ npm publish
 
 ## Contributors
 
-[contributors](https://github.com/just-utils/just-utils/graphs/contributors)
+[contributors](https://github.com/sixwinds/just-utils/graphs/contributors)
 
 ## Change Log
 [CHANGELOG.md](./CHANGELOG.md)

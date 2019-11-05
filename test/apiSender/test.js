@@ -3,8 +3,6 @@ const expect = require('expect.js');
 const fetchMock = require('fetch-mock');
 // src
 const { ApiSender } = require('../../src/index');
-const { default: paramsToQueryString } = require('../../src/apiSender/paramsToQueryString');
-
 
 describe('ApiSender', function() {
     describe('test first parameter[url]', function() {
