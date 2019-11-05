@@ -7,7 +7,7 @@
 [![NPM downloads](http://img.shields.io/npm/dm/just-utils.svg?style=flat-square)](http://www.npmtrends.com/just-utils)
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/just-utils/just-utils.svg)](http://isitmaintained.com/project/just-utils/just-utils "Percentage of issues still open")
 
-https://github.com/sixwinds/just-utils/blob/master/LICENSE
+Some commonly used utils in daily business code development
 
 ## Characteristics
 
