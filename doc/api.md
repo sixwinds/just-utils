@@ -15,7 +15,8 @@ Simple encapsulation of web api fetch.
   + Response json parse error.
   + Response json which is business failure.
 
-parameters and return of function need follow below rules:
+### Usage
+`const resPromise = ApiSender.send(url, options)`
 
 - param {string} url - http request url
 - param {object} options - ajax option object
@@ -27,7 +28,7 @@ parameters and return of function need follow below rules:
 
 For example
 
-### request without parameters
+#### request without parameters
 ```js
 import { ApiSender } from 'just-utils';
 
@@ -37,7 +38,7 @@ ApiSender.send('http://demo/api/get').then(function(resultJson) {
 });
 ```
 
-### request with paramters
+#### request with paramters
 ```js
 import { ApiSender } from 'just-utils';
 
@@ -51,7 +52,7 @@ ApiSender.send('http://demo/api/getpostputdelete', {
 });
 ```
 
-### exception/error handling
+#### exception/error handling
 ```js
 import { ApiSender } from 'just-utils';
 
@@ -67,7 +68,7 @@ ApiSender.send('http://demo/api/getpostputdelete', {
 })
 ```
 
-### make business failures as error
+#### make business failures as error
 ```js
 import { ApiSender } from 'just-utils';
 
@@ -87,7 +88,7 @@ ApiSender.send('http://demo/api/getpostputdelete', {
 })
 ```
 
-### set request headers
+#### set request headers
 ```js
 import { ApiSender } from 'just-utils';
 
