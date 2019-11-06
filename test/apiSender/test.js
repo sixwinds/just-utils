@@ -288,5 +288,41 @@ describe('ApiSender', function() {
             });
         });
     });
+
+    describe('test options.headers', function() {
+        afterEach(function() {
+            fetchMock.reset();
+        });
+        it('add additional headers', function() {
+            const url = 'http://just-utils/test/apisender/get';
+            fetchMock.get(url, 200);
+            ApiSender.send(url, {
+                headers: {
+                    'x-csrf-token': 'xQOAK6ZlIOBsQTnUaSb3'
+                }
+            });
+            const opts = fetchMock.lastOptions(url);
+            expect(opts.headers).to.eql({
+                Accept: 'application/json, text/javascript, */*; q=0.01',
+                'Content-Type': 'application/json',
+                'x-csrf-token': 'xQOAK6ZlIOBsQTnUaSb3'
+            });
+        });
+
+        it('override default headers', function() {
+            const url = 'http://just-utils/test/apisender/get';
+            fetchMock.get(url, 200);
+            ApiSender.send(url, {
+                headers: {
+                    Accept: 'application/json'
+                }
+            });
+            const opts = fetchMock.lastOptions(url);
+            expect(opts.headers).to.eql({
+                Accept: 'application/json',
+                'Content-Type': 'application/json'
+            });
+        });
+    });
 });
 
