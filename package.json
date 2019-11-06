@@ -9,7 +9,7 @@
   "scripts": {
     "clean": "rimraf ./dist",
     "test": "npm run lint && cross-env NODE_ENV=test nyc mocha --recursive",
-    "release": "npm test && npm run build && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags",
+    "release": "npm test && npm run build && git commit -am 0.0.1 && git tag 0.1.0 && git push && git push --tags",
     "lint": "eslint -c .eslintrc.js \"src/**/*.js\"",
     "lint:fix": "eslint --fix -c .eslintrc.js 'src/**/*.js' --fix",
     "build:self": "rollup -c config/rollup.config.js",
