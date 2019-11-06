@@ -2,7 +2,7 @@
 [![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/sixwinds/just-utils)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/sixwinds/just-utils/blob/master/LICENSE)
 [![Build Status](https://travis-ci.org/sixwinds/just-utils.svg?branch=master)](https://travis-ci.org/sixwinds/just-utils)
-[![Coveralls](https://img.shields.io/coveralls/sixwinds/just-utils.svg)](https://coveralls.io/github/sixwinds/just-utils)
+[![Coverage Status](https://coveralls.io/repos/github/sixwinds/just-utils/badge.svg)](https://coveralls.io/github/sixwinds/just-utils)
 [![npm](https://img.shields.io/badge/npm-0.1.0-orange.svg)](https://www.npmjs.com/package/just-utils)
 [![NPM downloads](http://img.shields.io/npm/dm/just-utils.svg?style=flat-square)](http://www.npmtrends.com/just-utils)
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/sixwinds/just-utils.svg)](http://isitmaintained.com/project/sixwinds/just-utils "Percentage of issues still open")
