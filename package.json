@@ -23,10 +23,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/just-utils/just-utils.git"
+    "url": "git://github.com/sixwinds/just-utils.git"
   },
   "bugs": {
-    "url": "https://github.com/just-utils/just-utils/issues"
+    "url": "https://github.com/sixwinds/just-utils/issues"
   },
   "files": [
     "/dist",
