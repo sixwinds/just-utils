@@ -108,6 +108,15 @@ ApiSender.send('http://demo/api/get', {
 ```js
 async function serviceMethod() {
   const resultJson = await ApiSender.send('http://demo/api/getbyawait');
+  /* 
+  eg: resultJson is 
+    {
+      success: true,
+      errorCode: 0,
+      errorMessage: '',
+      payload: {}
+    }
+  */
   // do something with resultJson
 }
 ```
