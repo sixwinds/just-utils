@@ -16,7 +16,9 @@ Simple encapsulation of web api fetch.
   + Response json which is business failure.
 
 ### Usage
-`const resPromise = ApiSender.send(url, options)`
+```js
+const resPromise = ApiSender.send(url, options)
+```
 
 - param {string} url - http request url
 - param {object} options - ajax option object
