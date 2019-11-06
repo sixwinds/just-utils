@@ -34,7 +34,7 @@ import { ApiSender } from 'just-utils';
 
 // default method is GET
 ApiSender.send('http://demo/api/get').then(function(resultJson) {
-  // do somthing with resultJson
+  // do something with resultJson
 });
 ```
 
@@ -48,7 +48,7 @@ ApiSender.send('http://demo/api/getpostputdelete', {
     paramName: 'paramValue'
   }
 }).then(function(resultJson) {
-  // do somthing with resultJson
+  // do something with resultJson
 });
 ```
 
@@ -62,9 +62,9 @@ ApiSender.send('http://demo/api/getpostputdelete', {
     paramName: 'paramValue'
   }
 }).then(function(resultJson) {
-  // do somthing with resultJson
+  // do something with resultJson
 }).catch(function(error) {
-  // do somthing with error
+  // do something with error
 })
 ```
 
@@ -81,10 +81,10 @@ ApiSender.send('http://demo/api/getpostputdelete', {
     return resultJson.success === true ? true : false;
   }
 }).then(function(resultJson) {
-  // do somthing with resultJson
+  // do something with resultJson
 }).catch(function(error) {
   // if isBizSuccess returns false, catch callback will be invoke
-  // do somthing with error
+  // do something with error
 })
 ```
 
@@ -98,9 +98,18 @@ ApiSender.send('http://demo/api/get', {
     'x-csrf-token': 'xQOAK6ZlIOBsQTnUaSb3'
   }
 }).then(function(resultJson) {
-  // do somthing with resultJson
+  // do something with resultJson
 });
 ```
+
+#### Async/Await
+```js
+async function serviceMethod() {
+  const resultJson = await ApiSender.send('http://demo/api/getbyawait');
+  // do something with resultJson
+}
+```
+
 
 
 special notice for errors and so on.
