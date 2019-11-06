@@ -5,7 +5,7 @@
 [![Coveralls](https://img.shields.io/coveralls/sixwinds/just-utils.svg)](https://coveralls.io/github/sixwinds/just-utils)
 [![npm](https://img.shields.io/badge/npm-0.1.0-orange.svg)](https://www.npmjs.com/package/just-utils)
 [![NPM downloads](http://img.shields.io/npm/dm/just-utils.svg?style=flat-square)](http://www.npmtrends.com/just-utils)
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/just-utils/just-utils.svg)](http://isitmaintained.com/project/sixwinds/just-utils "Percentage of issues still open")
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/sixwinds/just-utils.svg)](http://isitmaintained.com/project/sixwinds/just-utils "Percentage of issues still open")
 
 Some commonly used utils in daily business code development
 
