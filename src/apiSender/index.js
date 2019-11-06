@@ -61,11 +61,9 @@ function sendImpl(url, options = {}) {
             return null;
         }
     }).then(function(responseBodyJson) {
-        if (responseBodyJson) {
-            if (isBizSuccess) {
-                if (isBizSuccess(responseBodyJson) !== true) {
-                    throw new Error('Unsuccessful api call');
-                }
+        if (isBizSuccess) {
+            if (isBizSuccess(responseBodyJson) !== true) {
+                throw new Error('Unsuccessful api call');
             }
         }
         return responseBodyJson;
