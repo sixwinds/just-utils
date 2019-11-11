@@ -33,7 +33,7 @@ const SimpleDateFormat = {
                 .replace('MM', MM)
                 .replace('M', M)
                 .replace('dd', dd)
-                .replace('d', dd)
+                .replace('d', d)
                 .replace('HH', HH)
                 .replace('H', H)
                 .replace('mm', mm)
@@ -43,7 +43,7 @@ const SimpleDateFormat = {
             
             return result;
         } else {
-            throw new Error('Invalid data');
+            throw new Error('Invalid date');
         }
     }
 };
