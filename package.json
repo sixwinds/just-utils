@@ -1,7 +1,7 @@
 {
   "name": "just-utils",
-  "version": "0.1.0",
-  "description": "jslib最好用的js库脚手架",
+  "version": "0.2.0",
+  "description": "Some commonly used utils in daily business code development",
   "main": "dist/index.js",
   "jsnext:main": "dist/index.esm.js",
   "module": "dist/index.esm.js",
