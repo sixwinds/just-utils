@@ -1,12 +1,17 @@
 
 export as namespace JustUtils;
 
-export { default as ApiSender } from './apiSender/index';
+import ApiSender, { ApiSenderApi } from './apiSender/index';
 
-export { default as SimpleDateFormat } from './simpleDateFormat/index';
+import SimpleDateFormat, { SimpleDateFormatApi } from './simpleDateFormat/index';
+
+export {
+  ApiSender,
+  SimpleDateFormat
+};
 
 declare module JustUtils {
-  export const SimpleDateFormat: SimpleDateFormat;
+  export const SimpleDateFormat: SimpleDateFormatApi;
 
-  export const ApiSender: ApiSender;
+  export const ApiSender: ApiSenderApi;
 }

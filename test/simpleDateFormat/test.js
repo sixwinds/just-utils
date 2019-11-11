@@ -34,6 +34,11 @@ describe('SimpleDateFormat', function() {
             expect(formatted).to.be('2019-11-11');
         });
 
+        it('test pattern yyyy-M-d H:m:s', function() {
+            const date = new Date(2019, 5, 5, 19, 9, 9 );
+            expect(SimpleDateFormat.format(date, 'yyyy-M-d H:m:s')).to.be('2019-6-5 19:9:9');
+        });
+
         it('test pattern of year is yyyy', function() {
             const year = 2019;
             const date = new Date(year, 0);

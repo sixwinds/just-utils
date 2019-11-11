@@ -5,6 +5,9 @@ interface SendOptions {
   isBizSuccess?: (response: object | null) => boolean;
 }
 
-export default {
+export interface ApiSenderApi {
   send(url: string, options?: SendOptions): Promise<object | null>;
 }
+
+declare const ApiSender: ApiSenderApi
+export default ApiSender;
