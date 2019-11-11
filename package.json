@@ -30,6 +30,7 @@
   },
   "files": [
     "/dist",
+    "types",
     "*.d.ts"
   ],
   "engines": {
@@ -62,5 +63,6 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.1.2"
-  }
+  },
+  "types": "./types/index.d.ts"
 }
