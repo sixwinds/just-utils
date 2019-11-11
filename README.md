@@ -1,11 +1,10 @@
-# [just-utils](https://github.com/just-utils/just-utils)
-[![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/sixwinds/just-utils)
-[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/sixwinds/just-utils/blob/master/LICENSE)
-[![Build Status](https://travis-ci.org/sixwinds/just-utils.svg?branch=master)](https://travis-ci.org/sixwinds/just-utils)
-[![Coverage Status](https://coveralls.io/repos/github/sixwinds/just-utils/badge.svg)](https://coveralls.io/github/sixwinds/just-utils)
-[![npm](https://img.shields.io/badge/npm-0.1.0-orange.svg)](https://www.npmjs.com/package/just-utils)
+# [just-utils](https://github.com/sixwinds/just-utils)
+[![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg?style=flat-square)](https://github.com/sixwinds/just-utils)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/sixwinds/just-utils/blob/master/LICENSE)
+[![Build Status](https://img.shields.io/travis/sixwinds/just-utils/master?style=flat-square)](https://travis-ci.org/sixwinds/just-utils)
+[![Coverage Status](https://img.shields.io/coveralls/github/sixwinds/just-utils/master?style=flat-square)](https://coveralls.io/github/sixwinds/just-utils)
+[![npm](https://img.shields.io/npm/v/just-utils?style=flat-square)](https://www.npmjs.com/package/just-utils)
 [![NPM downloads](http://img.shields.io/npm/dm/just-utils.svg?style=flat-square)](http://www.npmtrends.com/just-utils)
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/sixwinds/just-utils.svg)](http://isitmaintained.com/project/sixwinds/just-utils "Percentage of issues still open")
 
 Some commonly used utils in daily business code development
 
