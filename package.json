@@ -1,6 +1,6 @@
 {
   "name": "just-utils",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Some commonly used utils in daily business code development",
   "main": "dist/index.js",
   "jsnext:main": "dist/index.esm.js",
@@ -9,7 +9,7 @@
   "scripts": {
     "clean": "rimraf ./dist",
     "test": "npm run lint && cross-env NODE_ENV=test nyc mocha --recursive",
-    "release": "npm test && npm run build && git commit -am 0.3.1 && git tag 0.3.1 && git push && git push --tags",
+    "release": "npm test && npm run build && git commit -am 0.3.2 && git tag 0.3.2 && git push && git push --tags",
     "lint": "eslint -c .eslintrc.js \"src/**/*.js\"",
     "lint:fix": "eslint --fix -c .eslintrc.js 'src/**/*.js' --fix",
     "build:self": "rollup -c config/rollup.config.js",
@@ -48,7 +48,7 @@
     "cross-env": "5.2.0",
     "es5-shim": "4.5.10",
     "eslint": "^5.15.1",
-    "expect.js": "0.3.1",
+    "expect.js": "0.3.2",
     "fetch-mock": "^8.0.0-alpha.14",
     "mocha": "^6.2.2",
     "node-fetch": "^2.6.0",
