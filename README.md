@@ -6,13 +6,18 @@
 [![npm](https://img.shields.io/npm/v/just-utils?style=flat-square)](https://www.npmjs.com/package/just-utils)
 [![NPM downloads](http://img.shields.io/npm/dm/just-utils.svg?style=flat-square)](http://www.npmtrends.com/just-utils)
 
-Some commonly used utils in daily business code development
+Some commonly used utils in daily business code development. Lib provides limited functionality to support simple project **which makes size of lib small**.
 
 ## Characteristics
 
-- ApiSender - Simple encapsulation of web api fetch 
+- ApiSender - Simple encapsulation of web api fetch.
+- SimpleDateFormat - Date Formatter which just support pattern: yyyy | M | MM | d | dd | H | HH | m | mm | s | ss.
 
-## Compatibility
+
+## Requirements
+- Polyfill of fetch should be included independently if your browser doesn't support fetch api.
+
+### Compatibility
 Unit tests guarantee support on the following environment:
 
 | IE   | CH   | FF   | SF   | OP   | IOS  | Android   | Node  |
