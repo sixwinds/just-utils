@@ -1,5 +1,4 @@
 # [just-utils](https://github.com/sixwinds/just-utils)
-[![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg?style=flat-square)](https://github.com/sixwinds/just-utils)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/sixwinds/just-utils/blob/master/LICENSE)
 [![Build Status](https://img.shields.io/travis/sixwinds/just-utils/master?style=flat-square)](https://travis-ci.org/sixwinds/just-utils)
 [![Coverage Status](https://img.shields.io/coveralls/github/sixwinds/just-utils/master?style=flat-square)](https://coveralls.io/github/sixwinds/just-utils)

@@ -119,11 +119,21 @@ async function serviceMethod() {
   */
   // do something with resultJson
 }
+
+// error handling
+async function serviceMethod2() {
+  try {
+    const resultJson = await ApiSender.send('http://demo/api/getbyawait');
+    // do something with resultJson
+  } catch(error) {
+    // do something with error
+  }
+}
 ```
 
 ## SimpleDateFormat
 
-Date Formatter which just support pattern: yyyy|M|MM|d|dd|H|HH|m|mm|s|ss.
+Date Formatter which just support pattern: yyyy | M | MM | d | dd | H | HH | m | mm | s | ss.
 
 + hour is 24-based.
 
