@@ -23,3 +23,7 @@
 ## 0.3.3 / 2019-11-12
 
 - Fix package version mismatch in package[-lock].json
+
+## 0.4.0 / 2019-11-12
+
+- Add generic for ApiSender.send method.
