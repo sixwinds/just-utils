@@ -18,7 +18,7 @@ function hasResponseBody(response) {
     } else {
         // If whatwg-fetch is used, the polyfill doesn't impl the body property of Response.
         // According to whatwg-fetch's source code, if response has no body, response._bodyText is set to ''.
-        if (response._bodyText !== '') {
+        if (fetch.polyfill && response._bodyInit) {
             result = true;
         }
     }
