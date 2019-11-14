@@ -11,6 +11,19 @@ const defaultHeaders = {
     'Content-Type': 'application/json'
 };
 
+function hasResponseBody(response) {
+    let result = false;
+    if (response.body) {
+        result = true;
+    } else {
+        // If whatwg-fetch is used, the polyfill doesn't impl the body property of Response.
+        // According to whatwg-fetch's source code, if response has no body, response._bodyText is set to ''.
+        if (response._bodyText !== '') {
+            result = true;
+        }
+    }
+    return result;
+}
 
 /**
  * This callback type is called `isBizSuccessCallback` and is displayed as a global symbol.
@@ -55,7 +68,7 @@ function sendImpl(url, options = {}) {
         if (response.status !== 200) {
             throw new Error('http status is not ok');
         }
-        if (response.body) {
+        if (hasResponseBody(response)) {
             return response.json();
         } else {
             return null;
