@@ -27,3 +27,7 @@
 ## 0.4.0 / 2019-11-12
 
 - Add generic for ApiSender.send method.
+
+## 0.4.1 / 2019-11-14
+
+- Fix bug: by using fetch polyfill -> whatwg-fetch, response hasn't property body. So response.body is not reliable.
