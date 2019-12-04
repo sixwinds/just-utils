@@ -2,9 +2,6 @@
   "name": "just-utils",
   "version": "1.0.0",
   "description": "Some commonly used utils in daily business code development",
-  "main": "dist/index.js",
-  "jsnext:main": "dist/index.esm.js",
-  "module": "dist/index.esm.js",
   "sideEffects": false,
   "scripts": {
     "clean": "rimraf ./dist",
@@ -29,11 +26,6 @@
   "bugs": {
     "url": "https://github.com/sixwinds/just-utils/issues"
   },
-  "files": [
-    "/dist",
-    "/types",
-    "*.d.ts"
-  ],
   "engines": {
     "node": ">= 0.12.0"
   },
@@ -66,6 +58,5 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.1.2"
-  },
-  "types": "./types/index.d.ts"
+  }
 }
