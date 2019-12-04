@@ -1,7 +1,7 @@
 // libs
 const expect = require('expect.js');
 // src
-const { SimpleDateFormat } = require('../../src/index');
+const { SimpleDateFormat } = require('../src/index');
 
 describe('SimpleDateFormat', function() {
     describe('test first parameter[date]', function() {

@@ -5,9 +5,9 @@
   "sideEffects": false,
   "scripts": {
     "clean": "rimraf ./dist",
-    "test": "npm run lint && cross-env NODE_ENV=test nyc mocha --recursive",
+    "test": "npm run lint && cross-env NODE_ENV=test nyc mocha --recursive ./packages/*/test/*.js",
     "release": "npm test && npm run build && git commit -am 0.4.1 && git tag 0.4.1 && git push && git push --tags",
-    "lint": "eslint -c .eslintrc.js \"src/**/*.js\"",
+    "lint": "eslint -c .eslintrc.js \"./packages/*/src/**/*.js\"",
     "lint:fix": "eslint --fix -c .eslintrc.js 'src/**/*.js' --fix",
     "build:self": "rollup -c config/rollup.config.js",
     "build:esm": "rollup -c config/rollup.config.esm.js",

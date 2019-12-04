@@ -2,7 +2,7 @@
 const expect = require('expect.js');
 const fetchMock = require('fetch-mock');
 // src
-const { ApiSender } = require('../../src/index');
+const { ApiSender } = require('../src/index');
 
 describe('ApiSender', function() {
     describe('test first parameter[url]', function() {
