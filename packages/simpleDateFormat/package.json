@@ -1,0 +1,17 @@
+{
+  "name": "@just-utils/simpledateformat",
+  "version": "1.0.0",
+  "description": "date formatter",
+  "main": "index.js",
+  "module": "es/index.js",
+  "scripts": {
+    "build": "node ../../shared/build-package",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "date",
+    "format"
+  ],
+  "author": "Bernie Wang <bernie.wangbj@gmail.com>",
+  "license": "MIT"
+}

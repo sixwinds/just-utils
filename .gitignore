@@ -39,8 +39,9 @@ jspm_packages/
 .pnp.js
 
 # production
-/build
-/dist
+/packages/*/es/
+/packages/*/umd/
+/packages/*/index.js
 
 # misc
 .DS_Store

@@ -1,6 +1,6 @@
 {
   "name": "just-utils",
-  "version": "0.4.1",
+  "version": "1.0.0",
   "description": "Some commonly used utils in daily business code development",
   "main": "dist/index.js",
   "jsnext:main": "dist/index.esm.js",
@@ -16,10 +16,11 @@
     "build:esm": "rollup -c config/rollup.config.esm.js",
     "build:aio": "rollup -c config/rollup.config.aio.js",
     "build:aio.min": "cross-env NODE_ENV=production npm run build:aio",
-    "build": "npm run clean && npm run build:self && npm run build:esm && npm run build:aio && npm run build:aio.min",
-    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+    "build": "lerna run build --parallel",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "bootstrap": "lerna bootstrap"
   },
-  "author": "just-utils",
+  "author": "Bernie Wang <bernie.wangbj@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -50,6 +51,7 @@
     "eslint": "^5.15.1",
     "expect.js": "0.3.1",
     "fetch-mock": "^8.0.0-alpha.14",
+    "lerna": "^3.19.0",
     "mocha": "^6.2.2",
     "node-fetch": "^2.6.0",
     "nyc": "13.1.0",
