@@ -47,19 +47,19 @@ $ npm install --save just-utils
 For node environment：
 
 ```js
-var JustUtils = require('just-utils');
+var JustUtils = require('@just-utils/all');
 ```
 
 For webpack or similar environment：
 
 ```js
-import JustUtils from 'just-utils';
+import JustUtils from '@just-utils/all';
 ```
 
 For requirejs environment:
 
 ```js
-requirejs(['node_modules/just-utils/dist/index.aio.js'], function (JustUtils) {
+requirejs(['node_modules/@just-utils/all/umd/index.js'], function (JustUtils) {
     // do something...
 })
 ```
@@ -67,7 +67,7 @@ requirejs(['node_modules/just-utils/dist/index.aio.js'], function (JustUtils) {
 For browser environment:
 
 ```html
-<script src="node_modules/just-utils/dist/index.aio.js"></script>
+<script src="node_modules//@just-utils/all/umd/index.js"></script>
 ```
 
 ## Documents

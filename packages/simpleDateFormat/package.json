@@ -13,5 +13,12 @@
     "format"
   ],
   "author": "Bernie Wang <bernie.wangbj@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "files": [
+    "es",
+    "src",
+    "index.js",
+    "index.d.ts"
+  ],
+  "homepage": "https://github.com/sixwinds/just-utils"
 }

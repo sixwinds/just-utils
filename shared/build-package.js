@@ -4,6 +4,7 @@ const path = require('path');
 const rollup = path.resolve(__dirname, '../node_modules/.bin/rollup');
 const rollupConfig = path.resolve(__dirname, '../config/rollup.config.js');
 const rollupEsmConfig = path.resolve(__dirname, '../config/rollup.config.esm.js');
+const rollupAioConfig = path.resolve(__dirname, '../config/rollup.config.aio.js');
 
 const exec = (command, extraEnv) =>
     execSync(command, {
@@ -16,6 +17,9 @@ exec(`${rollup} -c ${rollupEsmConfig}`);
 
 console.log('Building CommonJS modules ...');
 exec(`${rollup} -c ${rollupConfig}`);
+
+console.log('Building UMD modules ...');
+exec(`${rollup} -c ${rollupAioConfig}`);
 
 // Not building UMD for now...
 

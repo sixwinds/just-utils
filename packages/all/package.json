@@ -24,5 +24,6 @@
     "src",
     "index.js",
     "index.d.ts"
-  ]
+  ],
+  "homepage": "https://github.com/sixwinds/just-utils"
 }
