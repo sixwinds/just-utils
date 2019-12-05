@@ -1,15 +1,15 @@
 // libs
-const expect = require('expect.js');
 const fetchMock = require('fetch-mock');
 // src
-const { ApiSender } = require('../src/index');
+import ApiSender from './index';
 
+/* eslint-disable */
 describe('ApiSender', function() {
     describe('test first parameter[url]', function() {
         afterEach(function() {
             fetchMock.reset();
         });
-        it('first parameter is passed', function(done) {
+        test('first parameter is passed', function(done) {
             const url = 'http://just-utils/test/apisender/get';
             fetchMock.get(url, 200);
             ApiSender.send(url).then(function() {
@@ -17,15 +17,15 @@ describe('ApiSender', function() {
             });
         });
         
-        it('first parameter is not passed', function() {
+        test('first parameter is not passed', function() {
             try {
                 ApiSender.send();
             } catch (error) {
-                expect(error.name).to.be('TypeError');
+                expect(error.name).toBe('TypeError');
             }
         });
 
-        it('first parameter is passed with query string', function() {
+        test('first parameter is passed with query string', function() {
             const url = 'http://just-utils/test/apisender/get';
             fetchMock.get(url, 200, {
                 query: { qs: 'true' }
@@ -34,7 +34,7 @@ describe('ApiSender', function() {
             expect(fetchMock.called(url, {
                 method: 'GET',
                 query: { qs: 'true' }
-            })).to.be(true);
+            })).toBe(true);
         });
     });
 
@@ -43,17 +43,17 @@ describe('ApiSender', function() {
             fetchMock.reset();
         });
 
-        it('GET request without data', function() {
+        test('GET request without data', function() {
             const url = 'http://just-utils/test/apisender/get';
 
             fetchMock.get(url, 200);
             ApiSender.send(url, { method: 'GET' });
             expect(fetchMock.called(url, {
                 method: 'GET'
-            })).to.be(true);
+            })).toBe(true);
         });
 
-        it('GET request with empty-value data', function() {
+        test('GET request with empty-value data', function() {
             const url = 'http://just-utils/test/apisender/get';
 
             fetchMock.get(url, 200, {
@@ -70,10 +70,10 @@ describe('ApiSender', function() {
             expect(fetchMock.called(url, {
                 method: 'GET',
                 query: { name3: 'value3' }
-            })).to.be(true);
+            })).toBe(true);
         });
 
-        it('append data as query string of GET request', function() {
+        test('append data as query string of GET request', function() {
             const data = {
                 name1: 'value1',
                 name2: 'value2'
@@ -88,10 +88,10 @@ describe('ApiSender', function() {
             expect(fetchMock.called(url, {
                 method: 'GET',
                 query: data
-            })).to.be(true);
+            })).toBe(true);
         });
 
-        it('append data as query string of GET request with query string', function() {
+        test('append data as query string of GET request with query string', function() {
             const data = {
                 name3: 'value3',
                 name2: 'value2'
@@ -115,7 +115,7 @@ describe('ApiSender', function() {
                     name2: data.name2,
                     name3: data.name3
                 }
-            })).to.be(true);
+            })).toBe(true);
         });
     });
 
@@ -124,7 +124,7 @@ describe('ApiSender', function() {
             fetchMock.reset();
         });
 
-        it('not append data as query string of POST request', function() {
+        test('not append data as query string of POST request', function() {
             const data = {
                 name1: 'value1',
                 name2: 'value2'
@@ -135,10 +135,10 @@ describe('ApiSender', function() {
                 method: 'POST',
                 data
             });
-            expect(fetchMock.lastUrl(fetchMock.MATCHED)).to.be(url);
+            expect(fetchMock.lastUrl(fetchMock.MATCHED)).toBe(url);
         });
 
-        it('POST request with data', function() {
+        test('POST request with data', function() {
             const data = {
                 name1: 'value1',
                 name2: 'value2'
@@ -152,10 +152,10 @@ describe('ApiSender', function() {
             expect(fetchMock.called(url, {
                 method: 'POST',
                 body: data
-            })).to.be(true);
+            })).toBe(true);
         });
 
-        it('PUT request with data', function() {
+        test('PUT request with data', function() {
             const data = {
                 name1: 'value1',
                 name2: 'value2'
@@ -169,9 +169,9 @@ describe('ApiSender', function() {
             expect(fetchMock.called(url, {
                 method: 'PUT',
                 body: data
-            })).to.be(true);
+            })).toBe(true);
         });
-        it('DELETE request with data', function() {
+        test('DELETE request with data', function() {
             const data = {
                 name1: 'value1',
                 name2: 'value2'
@@ -185,7 +185,7 @@ describe('ApiSender', function() {
             expect(fetchMock.called(url, {
                 method: 'DELETE',
                 body: data
-            })).to.be(true);
+            })).toBe(true);
         });
     });
 
@@ -194,7 +194,7 @@ describe('ApiSender', function() {
             fetchMock.reset();
         });
         
-        it('without isBizSuccess', function(done) {
+        test('without isBizSuccess', function(done) {
             const url = 'http://just-utils/test/apisender/get';
             const responseJson = {
                 success: true,
@@ -206,12 +206,12 @@ describe('ApiSender', function() {
             ApiSender.send(url, {
                 method: 'GET'
             }).then(function(resultJson) {
-                expect(resultJson).to.eql(responseJson);
+                expect(resultJson).toEqual(responseJson);
                 done();
             });
         });
 
-        it('with isBizSuccess return true', function(done) {
+        test('with isBizSuccess return true', function(done) {
             const url = 'http://just-utils/test/apisender/get';
             const responseJson = {
                 success: true,
@@ -224,12 +224,12 @@ describe('ApiSender', function() {
                 method: 'GET',
                 isBizSuccess: function() { return true; }
             }).then(function(resultJson) {
-                expect(resultJson).to.eql(responseJson);
+                expect(resultJson).toEqual(responseJson);
                 done();
             });
         });
 
-        it('with isBizSuccess return false', function(done) {
+        test('with isBizSuccess return false', function(done) {
             const url = 'http://just-utils/test/apisender/get';
             const responseJson = {
                 success: true,
@@ -242,12 +242,12 @@ describe('ApiSender', function() {
                 method: 'GET',
                 isBizSuccess: function() { return false; }
             }).catch(function(error) {
-                expect(error.message).to.be('Unsuccessful api call');
+                expect(error.message).toBe('Unsuccessful api call');
                 done();
             });
         });
 
-        it('with isBizSuccess return non-true', function(done) {
+        test('with isBizSuccess return non-true', function(done) {
             const url = 'http://just-utils/test/apisender/get';
             const responseJson = {
                 success: true,
@@ -260,7 +260,7 @@ describe('ApiSender', function() {
                 method: 'GET',
                 isBizSuccess: function() {}
             }).catch(function(error) {
-                expect(error.message).to.be('Unsuccessful api call');
+                expect(error.message).toBe('Unsuccessful api call');
                 done();
             });
         });
@@ -271,7 +271,7 @@ describe('ApiSender', function() {
             fetchMock.reset();
         });
 
-        it('response with status code 200', function(done) {
+        test('response with status code 200', function(done) {
             const url = 'http://just-utils/test/apisender/get';
             fetchMock.get(url, 200);
             ApiSender.send(url).then(function() {
@@ -279,11 +279,11 @@ describe('ApiSender', function() {
             });
         });
 
-        it('response with status code 300', function(done) {
+        test('response with status code 300', function(done) {
             const url = 'http://just-utils/test/apisender/get';
             fetchMock.get(url, 300);
             ApiSender.send(url).catch(function(error) {
-                expect(error.message).to.be('http status is not ok');
+                expect(error.message).toBe('http status is not ok');
                 done();
             });
         });
@@ -293,7 +293,7 @@ describe('ApiSender', function() {
         afterEach(function() {
             fetchMock.reset();
         });
-        it('add additional headers', function() {
+        test('add additional headers', function() {
             const url = 'http://just-utils/test/apisender/get';
             fetchMock.get(url, 200);
             ApiSender.send(url, {
@@ -302,14 +302,14 @@ describe('ApiSender', function() {
                 }
             });
             const opts = fetchMock.lastOptions(url);
-            expect(opts.headers).to.eql({
+            expect(opts.headers).toEqual({
                 Accept: 'application/json, text/javascript, */*; q=0.01',
                 'Content-Type': 'application/json',
                 'x-csrf-token': 'xQOAK6ZlIOBsQTnUaSb3'
             });
         });
 
-        it('override default headers', function() {
+        test('override default headers', function() {
             const url = 'http://just-utils/test/apisender/get';
             fetchMock.get(url, 200);
             ApiSender.send(url, {
@@ -318,7 +318,7 @@ describe('ApiSender', function() {
                 }
             });
             const opts = fetchMock.lastOptions(url);
-            expect(opts.headers).to.eql({
+            expect(opts.headers).toEqual({
                 Accept: 'application/json',
                 'Content-Type': 'application/json'
             });
