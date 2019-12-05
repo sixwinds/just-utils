@@ -5,8 +5,7 @@
   "main": "index.js",
   "module": "es/index.js",
   "scripts": {
-    "build": "node ../../shared/build-package",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node ../../shared/build-package"
   },
   "keywords": [
     "javascript",
