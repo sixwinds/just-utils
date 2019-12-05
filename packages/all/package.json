@@ -1,6 +1,6 @@
 {
   "name": "@just-utils/all",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Some commonly used utils in daily business code development",
   "main": "index.js",
   "module": "es/index.js",
@@ -15,8 +15,8 @@
   "author": "Bernie Wang <bernie.wangbj@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@just-utils/apisender": "^1.1.0",
-    "@just-utils/simpledateformat": "^1.1.0"
+    "@just-utils/apisender": "^1.1.1",
+    "@just-utils/simpledateformat": "^1.1.1"
   },
   "files": [
     "es",
