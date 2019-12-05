@@ -15,8 +15,8 @@
   "author": "Bernie Wang <bernie.wangbj@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@just-utils/apisender": "^1.0.0",
-    "@just-utils/simpledateformat": "^1.0.0"
+    "@just-utils/apisender": "^1.1.0",
+    "@just-utils/simpledateformat": "^1.1.0"
   },
   "files": [
     "es",
