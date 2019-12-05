@@ -25,7 +25,7 @@
     "index.d.ts"
   ],
   "homepage": "https://github.com/sixwinds/just-utils",
-  "gitHead": "ee0b2ed25ca43170e4f4df7a90a113fae4c525dc",
+  "gitHead": "f24bed1675645d63635b81b2f7c8b52ba7cef0aa",
   "publishConfig": {
     "access": "public"
   }
