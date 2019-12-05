@@ -16,7 +16,17 @@ Simple encapsulation of web api fetch.
   + Response json which is business failure.
 
 ### Usage
+import all utils
 ```js
+import { ApiSender } from '@just-utils/all';
+
+const resPromise = ApiSender.send(url, options)
+```
+
+or only import desired util
+```js
+import ApiSender from '@just-utils/apisender';
+
 const resPromise = ApiSender.send(url, options)
 ```
 
@@ -32,8 +42,6 @@ For example
 
 #### request without parameters
 ```js
-import { ApiSender } from 'just-utils';
-
 // default method is GET
 ApiSender.send('http://demo/api/get').then(function(resultJson) {
   // do something with resultJson
@@ -42,8 +50,6 @@ ApiSender.send('http://demo/api/get').then(function(resultJson) {
 
 #### request with paramters
 ```js
-import { ApiSender } from 'just-utils';
-
 ApiSender.send('http://demo/api/getpostputdelete', {
   method: 'POST' // also 'GET', 'PUT', 'DELETE',
   data: {
@@ -56,8 +62,6 @@ ApiSender.send('http://demo/api/getpostputdelete', {
 
 #### exception/error handling
 ```js
-import { ApiSender } from 'just-utils';
-
 ApiSender.send('http://demo/api/getpostputdelete', {
   method: 'POST' // also 'GET', 'PUT', 'DELETE',
   data: {
@@ -72,8 +76,6 @@ ApiSender.send('http://demo/api/getpostputdelete', {
 
 #### make business failures as error
 ```js
-import { ApiSender } from 'just-utils';
-
 ApiSender.send('http://demo/api/getpostputdelete', {
   method: 'POST' // also 'GET', 'PUT', 'DELETE',
   data: {
@@ -92,8 +94,6 @@ ApiSender.send('http://demo/api/getpostputdelete', {
 
 #### set request headers
 ```js
-import { ApiSender } from 'just-utils';
-
 // default method is GET
 ApiSender.send('http://demo/api/get', {
   headers: {
@@ -138,7 +138,17 @@ Date Formatter which just support pattern: yyyy | M | MM | d | dd | H | HH | m |
 + hour is 24-based.
 
 ### Usage
+import all utils
 ```js
+import { SimpleDateFormat } from '@just-utils/all';
+
+const dateStr = SimpleDateFormat.format(new Date(), 'yyyy-MM-dd');
+```
+
+or only import desired util
+```js
+import SimpleDateFormat from '@just-utils/simpledateformat';
+
 const dateStr = SimpleDateFormat.format(new Date(), 'yyyy-MM-dd');
 ```
 
@@ -149,8 +159,6 @@ const dateStr = SimpleDateFormat.format(new Date(), 'yyyy-MM-dd');
 For example
 ### patterns and result
 ```js
-import { SimpleDateFormat as sdf } from 'just-utils';
-
 const date = new Date(2019, 5, 5, 19, 9, 9 );
 sdf.format(date); // '2019-06-05' default patter is yyyy-MM-dd
 sdf.format(date, 'yyyy-M-d'); // '2019-6-5';

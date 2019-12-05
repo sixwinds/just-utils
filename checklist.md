@@ -3,6 +3,5 @@
 2. CHANGELOG.md
 3. version in package.json
     + versoin
-    + scripts.release
 4. version in package-lock.json
     + version

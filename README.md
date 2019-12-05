@@ -41,7 +41,7 @@ Unit tests guarantee support on the following environment:
 Using npm, download and install the code. 
 
 ```bash
-$ npm install --save just-utils
+$ npm install --save @just-utils/all
 ```
 
 For node environment：

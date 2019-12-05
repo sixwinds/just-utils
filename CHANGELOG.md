@@ -31,3 +31,7 @@
 ## 0.4.1 / 2019-11-14
 
 - Fix bug: by using fetch polyfill -> whatwg-fetch, response hasn't property body. So response.body is not reliable.
+
+## 1.1.0 / 2019-12-5
+
+- Reorgnize repo by monorepo structure
