@@ -19,5 +19,6 @@
     "index.js",
     "index.d.ts"
   ],
-  "homepage": "https://github.com/sixwinds/just-utils"
+  "homepage": "https://github.com/sixwinds/just-utils",
+  "gitHead": "81df84e345bc82ba4605a83e7418fa1cacf97e08"
 }
