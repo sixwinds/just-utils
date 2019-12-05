@@ -14,7 +14,7 @@
     "build:aio": "rollup -c config/rollup.config.aio.js",
     "build:aio.min": "cross-env NODE_ENV=production npm run build:aio",
     "build": "lerna run build --parallel",
-    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls",
     "bootstrap": "lerna bootstrap"
   },
   "author": "Bernie Wang <bernie.wangbj@gmail.com>",
