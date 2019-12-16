@@ -35,3 +35,7 @@
 ## 1.1.1 / 2019-12-5
 
 - Reorgnize repo by monorepo structure
+
+### 1.1.2 / 2019-12-16
+
+- Fix bug: get request doesnt support array paramter.

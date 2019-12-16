@@ -1,13 +1,30 @@
+function isArray(arr) {
+    return Object.prototype.toString.call(arr) === '[object Array]';
+}
+
+function arrayParamsToQueryString(name, values) {
+    const pairArray = [];
+    const len = values.length;
+    for (let i = 0; i < len; i++) {
+        const currentValue = values[i];
+        if (currentValue !== undefined && currentValue !== null) {
+            pairArray.push(`${name}=${encodeURIComponent(currentValue)}`);
+        }
+    }
+    return pairArray.join('&');
+}
+
 function paramsToQueryString(params) {
     let queryString = '';
     if (params) {
         for(let name in params) {
             const value = params[name];
             if (value !== undefined && value !== null) {
+                const currentQs = isArray(value) ? arrayParamsToQueryString(name, value) : `${name}=${encodeURIComponent(value)}`;
                 if (queryString) {
-                    queryString += `&${name}=${encodeURIComponent(value)}`;
+                    queryString += `&${currentQs}`;
                 } else {
-                    queryString = `${name}=${encodeURIComponent(value)}`;
+                    queryString = currentQs;
                 }
             }
         }

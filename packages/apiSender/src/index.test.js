@@ -117,6 +117,34 @@ describe('ApiSender', function() {
                 }
             })).toBe(true);
         });
+
+        test('data with array property of GET request', function() {
+            const url = 'http://just-utils/test/apisender/get';
+            fetchMock.get(url + '?single=singleValue&multiple=multiple1&multiple=multiple2', 200);
+            ApiSender.send(url, {
+                method: 'GET',
+                data: {
+                    single: 'singleValue',
+                    multiple: ['multiple1', 'multiple2']
+                }
+            });
+            const lastUrl = fetchMock.lastUrl(fetchMock.MATCHED);
+            expect(lastUrl).toBe(url + '?single=singleValue&multiple=multiple1&multiple=multiple2');
+        });
+
+        test('data with array property of GET request(array contains null and undefined)', function() {
+            const url = 'http://just-utils/test/apisender/get';
+            fetchMock.get(url + '?single=singleValue&multiple=multiple1&multiple=multiple2', 200);
+            ApiSender.send(url, {
+                method: 'GET',
+                data: {
+                    single: 'singleValue',
+                    multiple: ['multiple1', null, undefined, 'multiple2']
+                }
+            });
+            const lastUrl = fetchMock.lastUrl(fetchMock.MATCHED);
+            expect(lastUrl).toBe(url + '?single=singleValue&multiple=multiple1&multiple=multiple2');
+        });
     });
 
     describe('test not GET request', function() {
