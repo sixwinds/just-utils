@@ -39,3 +39,7 @@
 ### 1.1.2 / 2019-12-16
 
 - Fix bug: get request doesnt support array paramter.
+
+### 1.1.3 / 2019-12-16
+
+- Fix bug: v1.1.2 was forgotten to build before publish.
