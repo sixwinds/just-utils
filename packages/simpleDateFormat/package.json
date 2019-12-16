@@ -1,6 +1,6 @@
 {
   "name": "@just-utils/simpledateformat",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "date formatter",
   "main": "index.js",
   "module": "es/index.js",
